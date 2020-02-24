@@ -31,9 +31,15 @@ public class Palindrome {
         userInputNoCaps = userInput.toLowerCase();
         reversedNoCaps = reversed.toLowerCase();
         //Comparing whether or not the strings match.
-        for(int ii = 0; ii < userInputNoCaps.length(); ii++) {
-            trueOrFalse = (int)userInputNoCaps.charAt(ii) == (int)reversedNoCaps.charAt(ii);
-        }
+        //Declaring a variable for a do while loop that compares characters and stops if they are different.
+        int ii = 0;
+        do {
+            if(ii < userInputNoCaps.length()) {
+                trueOrFalse = (int)userInputNoCaps.charAt(ii) == (int)reversedNoCaps.charAt(ii);
+                ii++;
+            }
+
+        } while(trueOrFalse == true);
         //Telling them their word in reverse and whether or not it is a palindrome.
         JOptionPane.showMessageDialog(null,"Your word in reverse is: "+reversed);
         if (trueOrFalse == true) {
