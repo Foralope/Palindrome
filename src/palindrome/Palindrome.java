@@ -18,6 +18,8 @@ public class Palindrome {
         //Variables.
         String userInput = "";
         String reversed = "";
+        String userInputNoCaps = "";
+        String reversedNoCaps = "";
         boolean trueOrFalse = false;
         //Getting user input
         userInput = JOptionPane.showInputDialog("Feed me a word to discover if it is a palindrome or not.");
@@ -25,9 +27,12 @@ public class Palindrome {
         for(int i = userInput.length() - 1; i >= 0; i--) {
             reversed = reversed + userInput.charAt(i);
         }
+        //Making new strings that are without capital letters.
+        userInputNoCaps = userInput.toLowerCase();
+        reversedNoCaps = reversed.toLowerCase();
         //Comparing whether or not the strings match.
-        for(int ii = 0; ii < userInput.length(); ii++) {
-            trueOrFalse = (int)userInput.charAt(ii) == (int)reversed.charAt(ii);
+        for(int ii = 0; ii < userInputNoCaps.length(); ii++) {
+            trueOrFalse = (int)userInputNoCaps.charAt(ii) == (int)reversedNoCaps.charAt(ii);
         }
         //Telling them their word in reverse and whether or not it is a palindrome.
         JOptionPane.showMessageDialog(null,"Your word in reverse is: "+reversed);
