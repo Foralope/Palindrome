@@ -38,7 +38,6 @@ public class Palindrome {
                 trueOrFalse = (int)userInputNoCaps.charAt(ii) == (int)reversedNoCaps.charAt(ii);
                 ii++;
             }
-
         } while(trueOrFalse == true);
         //Telling them their word in reverse and whether or not it is a palindrome.
         JOptionPane.showMessageDialog(null,"Your word in reverse is: "+reversed);
